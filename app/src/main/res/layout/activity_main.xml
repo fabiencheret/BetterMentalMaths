@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:srcCompat="@tools:sample/avatars"
+            android:id="@+id/imageView" android:layout_marginEnd="142dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="141dp" android:layout_marginTop="180dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="1.0"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="176dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="177dp" app:layout_constraintHorizontal_bias="0.7" tools:text="Bienvenue !"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" android:textAlignment="center"/>
+    <SeekBar
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="317dp"
+            android:layout_height="44dp"
+            android:max="8"
+            android:progress="2"
+            android:id="@+id/seekBar"
+            android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="24dp"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2" tools:text="Choisir une difficulté :"
+            android:layout_marginTop="29dp" app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="137dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="137dp"/>
+    <TextView
+            android:layout_width="48dp"
+            android:layout_height="45dp"
+            android:ems="2"
+            android:id="@+id/textView3"
+            android:text="3"
+            app:layout_constraintStart_toEndOf="@+id/seekBar"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp"
+            app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" android:textAlignment="center"/>
+    <Button
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button" tools:text="Go !"
+            android:layout_marginTop="24dp" app:layout_constraintTop_toBottomOf="@+id/seekBar"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="162dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="162dp"/>
+</android.support.constraint.ConstraintLayout>
