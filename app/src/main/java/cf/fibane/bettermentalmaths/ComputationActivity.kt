@@ -1,5 +1,6 @@
 package cf.fibane.bettermentalmaths
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -69,7 +70,9 @@ class ComputationActivity : AppCompatActivity() {
         editText.setText("", TextView.BufferType.EDITABLE)
         editText.setTextColor(Color.BLACK)
         if(game.getRound() == numberOfLoops){
-            //go to result page
+            val intent = Intent(this@ComputationActivity, ResultsActivity::class.java)
+            intent.putExtra("GAME",game)
+            startActivity(intent)
         } else {
             val calc = game.getNextComputation()
             calculationText.text = calc.toString()

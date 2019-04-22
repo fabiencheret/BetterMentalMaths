@@ -1,6 +1,8 @@
 package cf.fibane.bettermentalmaths
 
-class Calculation {
+import java.io.Serializable
+
+class Calculation : Serializable{
 
     private val numbers = mutableListOf<Int>()
     private val signs = mutableListOf<Sign>()

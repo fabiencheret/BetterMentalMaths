@@ -1,6 +1,8 @@
 package cf.fibane.bettermentalmaths
 
-class Game (private val difficulty: Int) {
+import java.io.Serializable
+
+class Game (private val difficulty: Int) : Serializable {
 
     var scoreOK = 0
     var scoreKO = 0
