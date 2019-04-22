@@ -40,11 +40,5 @@ class Calculation {
         return result
     }
 
-    fun compareInputToSolution(input: Int): Boolean{
-        if(input == getSolution())
-            return true
-        return false;
-    }
-
 
 }

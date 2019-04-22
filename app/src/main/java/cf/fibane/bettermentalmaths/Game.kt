@@ -4,6 +4,9 @@ class Game (private val difficulty: Int) {
 
     var scoreOK = 0
     var scoreKO = 0
+    var calcList = ArrayList<Calculation>()
+
+    fun getRound(): Int = scoreKO + scoreOK
 
     fun getNextComputation(): Calculation {
         val calc = Calculation()
@@ -13,12 +16,14 @@ class Game (private val difficulty: Int) {
         for(i in 0 until difficulty){
             calc.addSign(getSign())
         }
+        calcList.add(calc)
         return calc
     }
 
+    fun getCurrentComputation() : Calculation = calcList.last()
+
     fun getRandomNumber(): Int {
-        var ret = 0;
-        ret = Math.ceil(Math.random() * 100).toInt();
+        val ret: Int = Math.ceil(Math.random() * 100).toInt();
         return ret;
     }
 

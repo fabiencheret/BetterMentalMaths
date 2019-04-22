@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                textView3.text = (progress + 1).toString()
+                textView3.text = (progress).toString()
             }
         })
 
